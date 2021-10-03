@@ -1,33 +1,27 @@
-import "./App.css";
-import "bootstrap/dist/css/bootstrap.min.css";
+import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./Home";
-import Create from "./Create";
-import Result from "./Result";
-import Background from "./Background";
-import Categories from "./Categories";
-import Edit from "./Edit";
-import Test from "./Test";
-import Rescat from "./Rescat";
+import Card from "./Card";
+import Easy from "./Easy";
+import Medium from "./Medium";
+import Hard from "./Hard";
 
 function App() {
   return (
-    <>
+    <div>
       <BrowserRouter>
         <div className="wrapper">
-          <Background></Background>
           <Switch>
-            <Route exact path="/" component={Home}/>
-            <Route exact path="/Categorized-Quiz's" component={Categories}/>
-            <Route exact path="/Create-Quiz/:id" component={Create}/>
-            <Route exact path="/Edit/:id" component={Edit}/>
-            <Route exact path="/Test/:id" component={Test}/>
-            <Route exact path="/Results/:id" component={Result}/>
-            <Route exact path="/Res/Categorized" component={Rescat}/>
+            <Route exact path="/" component={Home}></Route>
+            <Route exact path="/Card" component={Card}></Route>
+            <Route exact path="/Easy" component={Easy}></Route>
+            <Route exact path="/Medium" component={Medium}></Route>
+            <Route exact path="/Hard" component={Hard}></Route>
           </Switch>
         </div>
       </BrowserRouter>
-    </>
+    </div>
   );
 }
 
