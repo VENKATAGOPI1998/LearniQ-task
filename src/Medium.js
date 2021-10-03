@@ -98,7 +98,7 @@ export default function Medium() {
         </div>
       ) : (
         <>
-          <div className="column">
+          <div className="central col-lg-12 col-md-6 col-sm-1">
             <div className="question-section">
               <div className="question-text">
                 {questions[currentQuestion].question}
