@@ -6,6 +6,7 @@ import Card from "./Card";
 import Easy from "./Easy";
 import Medium from "./Medium";
 import Hard from "./Hard";
+import "./App.css";
 
 function App() {
   return (
