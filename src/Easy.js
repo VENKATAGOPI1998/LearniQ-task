@@ -3,7 +3,7 @@ import React, { useState } from "react";
 export default function Easy() {
   const questions = [
     {
-      question: "An algebraic expression containing three terms is called a",
+      question: "Q.An algebraic expression containing three terms is called a:",
       type: "Easy",
       answerOptions: [
         { answer: "monomial", isCorrect: false },
@@ -14,7 +14,7 @@ export default function Easy() {
     },
     {
       question:
-        "Number of terms in the expression 3.x^2.y - 2.y^2.z - z^2.x + 5 is",
+        "Q.Number of terms in the expression 3.x^2.y - 2.y^2.z - z^2.x + 5 is:",
       type: "Easy",
       answerOptions: [
         { answer: "2", isCorrect: false },
@@ -24,7 +24,7 @@ export default function Easy() {
       ],
     },
     {
-      question: "The terms of expression 4.x^2 - 3.x.y are:",
+      question: "Q.The terms of expression 4.x^2 - 3.x.y are:",
       type: "Easy",
       answerOptions: [
         { answer: "4.x^2 and -3.x.y", isCorrect: true },
@@ -34,7 +34,7 @@ export default function Easy() {
       ],
     },
     {
-      question: "The subtraction of 5 times of y from x is",
+      question: "Q.The subtraction of 5 times of y from x is:",
       type: "Easy",
       answerOptions: [
         { answer: "5x - y", isCorrect: false },
@@ -44,7 +44,7 @@ export default function Easy() {
       ],
     },
     {
-      question: "The value of 3.x^2 - 5.x + 3 when x = 1 is",
+      question: "Q.The value of 3.x^2 - 5.x + 3 when x = 1 is:",
       type: "Easy",
       answerOptions: [
         { answer: "1", isCorrect: true },
@@ -54,7 +54,7 @@ export default function Easy() {
       ],
     },
     {
-      question: "(5/6)^0 =",
+      question: "Q.(5/6)^0 = :",
       type: "Easy",
       answerOptions: [
         { answer: "1", isCorrect: true },
@@ -64,7 +64,7 @@ export default function Easy() {
       ],
     },
     {
-      question: "(-1)^50 × (-1)^51 × (1)^100 × (-1)^101 =",
+      question: "Q.(-1)^50 × (-1)^51 × (1)^100 × (-1)^101 = :",
       type: "Easy",
       answerOptions: [
         { answer: "-1", isCorrect: false },
@@ -91,29 +91,34 @@ export default function Easy() {
     }
   };
   return (
-    <div className="app">
-      {showScore ? (
-        <div className="score-section">
-          You scored {score} out of {questions.length}
-        </div>
-      ) : (
-        <div className="central col-lg-12 col-md-6 col-sm-1">
-          <div className="question-section">
-            <div className="question-text">
-              {questions[currentQuestion].question}
+    <>
+    <h3 style={{color:"white",fontWeight:"bold",backgroundColor:"blue"}}>Select the answer navigate to next question</h3>
+      <div className="app">
+        {showScore ? (
+          <div className="score-section">
+            You scored {score} out of {questions.length}
+          </div>
+        ) : (
+          <div className="central col-lg-12 col-md-6 col-sm-1">
+            <div className="question-section">
+              <div className="question-text">
+                {questions[currentQuestion].question}
+              </div>
+            </div>
+            <div className="answer-section">
+              {questions[currentQuestion].answerOptions.map((answerOption) => (
+                <button
+                  onClick={() =>
+                    handleAnswerOptionClick(answerOption.isCorrect)
+                  }
+                >
+                  {answerOption.answer}
+                </button>
+              ))}
             </div>
           </div>
-          <div className="answer-section">
-            {questions[currentQuestion].answerOptions.map((answerOption) => (
-              <button
-                onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}
-              >
-                {answerOption.answer}
-              </button>
-            ))}
-          </div>
-        </div>
-      )}
-    </div>
+        )}
+      </div>
+    </>
   );
 }

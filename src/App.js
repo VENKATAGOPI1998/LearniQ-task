@@ -11,7 +11,7 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-        <div className="wrapper">
+        <div className="central">
           <Switch>
             <Route exact path="/" component={Home}></Route>
             <Route exact path="/Card" component={Card}></Route>

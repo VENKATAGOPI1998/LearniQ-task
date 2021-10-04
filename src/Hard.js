@@ -4,7 +4,7 @@ export default function Hard() {
   const questions = [
     {
       question:
-        "The expression for the number of diagonals that we can make from one vertex of a n sided polygon is:",
+        "Q.The expression for the number of diagonals that we can make from one vertex of a n sided polygon is:",
       type: "Hard",
       answerOptions: [
         { answer: "2n + 1", isCorrect: false },
@@ -14,7 +14,7 @@ export default function Hard() {
       ],
     },
     {
-      question: "123.x^2.y - 138.x^2.y is a like term of",
+      question: "Q.123.x^2.y - 138.x^2.y is a like term of :",
       type: "Hard",
       answerOptions: [
         { answer: "10.x.y", isCorrect: false },
@@ -24,7 +24,7 @@ export default function Hard() {
       ],
     },
     {
-      question: "(2^20 ÷ 2^15) × 2^3 =",
+      question: "Q.(2^20 ÷ 2^15) × 2^3 = :",
       type: "Hard",
       answerOptions: [
         { answer: "2^15", isCorrect: true },
@@ -34,7 +34,7 @@ export default function Hard() {
       ],
     },
     {
-      question: "(8^2 × 8^4) - 2^18 =",
+      question: "Q.(8^2 × 8^4) - 2^18 = :",
       type: "Hard",
       answerOptions: [
         { answer: "2^2", isCorrect: false },
@@ -44,7 +44,7 @@ export default function Hard() {
       ],
     },
     {
-      question: "(3^7) ÷ (81 × 3^3) =",
+      question: "Q.(3^7) ÷ (81 × 3^3) = :",
       type: "Hard",
       answerOptions: [
         { answer: "3", isCorrect: false },
@@ -54,7 +54,7 @@ export default function Hard() {
       ],
     },
     {
-      question: "(10 × 5^(n+1)+ 25 × 5^n) ÷ (3 × 5^(n+2)+ 10 × 5^(n+1))",
+      question: "Q.(10 × 5^(n+1)+ 25 × 5^n) ÷ (3 × 5^(n+2)+ 10 × 5^(n+1)) :",
       type: "Hard",
       answerOptions: [
         { answer: "3/5", isCorrect: true },
@@ -65,7 +65,7 @@ export default function Hard() {
     },
     {
       question:
-        "Find the mode for the data set, which shows the heights( in inches ) of 10 students in a class: 60, 65, 63, 62, 65, 70, 62, 68, 60, 65",
+        "Q.Find the mode for the data set, which shows the heights( in inches ) of 10 students in a class: 60, 65, 63, 62, 65, 70, 62, 68, 60, 65 :",
       type: "Hard",
       answerOptions: [
         { answer: "62", isCorrect: false },
@@ -92,6 +92,8 @@ export default function Hard() {
     }
   };
   return (
+    <>
+    <h3 style={{color:"white",fontWeight:"bold",backgroundColor:"blue"}}>Select the answer navigate to next question</h3>
     <div className="app">
       {showScore ? (
         <div className="score-section">
@@ -120,5 +122,6 @@ export default function Hard() {
         </>
       )}
     </div>
+    </>
   );
 }

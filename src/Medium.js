@@ -3,7 +3,7 @@ import React, { useState } from "react";
 export default function Medium() {
   const questions = [
     {
-      question: "Factors of -5.x^2.y^2.z are",
+      question: "Q.Factors of -5.x^2.y^2.z are:",
       type: "Medium",
       answerOptions: [
         { answer: "-5.x.y.z", isCorrect: false },
@@ -13,7 +13,7 @@ export default function Medium() {
       ],
     },
     {
-      question: "Coefficient of x in -9.x.y^2.z is",
+      question: "Q.Coefficient of x in -9.x.y^2.z is:",
       type: "Medium",
       answerOptions: [
         { answer: "9.y.z", isCorrect: false },
@@ -24,7 +24,7 @@ export default function Medium() {
     },
     {
       question:
-        "The side length of the top of a square table is x. The expression for perimeter is:",
+        "Q.The side length of the top of a square table is x. The expression for perimeter is:",
       type: "Medium",
       answerOptions: [
         { answer: "4 + x", isCorrect: false },
@@ -34,7 +34,7 @@ export default function Medium() {
       ],
     },
     {
-      question: "(2^2)^n = (2^3)^4, then n = ",
+      question: "Q.(2^2)^n = (2^3)^4, then n = :",
       type: "Medium",
       answerOptions: [
         { answer: "4", isCorrect: false },
@@ -44,7 +44,7 @@ export default function Medium() {
       ],
     },
     {
-      question: "(-7/5)^-1 =",
+      question: "Q.(-7/5)^-1 = :",
       type: "Medium",
       answerOptions: [
         { answer: "5/7", isCorrect: false },
@@ -54,7 +54,7 @@ export default function Medium() {
       ],
     },
     {
-      question: "81^5 ÷ (3^2)^5 =",
+      question: "Q.81^5 ÷ (3^2)^5 = :",
       type: "Medium",
       answerOptions: [
         { answer: "3^10", isCorrect: true },
@@ -64,7 +64,7 @@ export default function Medium() {
       ],
     },
     {
-      question: "(1/4)^-3 - (1/3)^-3 =",
+      question: "Q.(1/4)^-3 - (1/3)^-3 = :",
       type: "Medium",
       answerOptions: [
         { answer: "37", isCorrect: true },
@@ -91,6 +91,8 @@ export default function Medium() {
     }
   };
   return (
+    <>
+    <h3 style={{color:"white",fontWeight:"bold",backgroundColor:"blue"}}>Select the answer navigate to next question</h3>
     <div className="app">
       {showScore ? (
         <div className="score-section">
@@ -119,5 +121,6 @@ export default function Medium() {
         </>
       )}
     </div>
+    </>
   );
 }
